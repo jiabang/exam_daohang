@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            background-image: url("bck.jpg");
+            background-color: #d4ff46;
+        }
+        .content1{
+            width: 100%;
+            height: 60px;
+            background-color: #a1ccc3;
+        }
+        #title1{
+            width: 1000px;
+            height: 60px;
+            background-color: #fff4fb;
+            margin: 0px auto;
+        }
+        #title1 div{
+            width: 200px;
+            height: 60px;
+            float: left;
+            /*margin-left: 2px;*/
+            /*display: inline-block; */ /* 出现5px 距离！！ */
+            font-family: "微软雅黑 Light";
+            text-align: center;
+            line-height: 60px;
+            font-size: x-large;
+            background: url(3.png);
+            position: relative;
+            text-shadow: 5px  5px  2px #ccc ;
+        }
+        #title1 div ul {
+            position: absolute;
+            width: 200px;
+            top: 60px;
+            left: 0px;
+            display: none;
+            list-style: none;
+
+            font-family: "微软雅黑 Light";
+            text-align: center;
+            text-shadow: 10px  0px  2px #ccc ;
+            line-height: 60px;
+            font-size: small;
+
+
+        }
+        #title1 div ul li{
+            background: url(3.png);
+            /*background-color: azure;*/
+        }
+        a:visited{
+            color: #ff4515;
+        }
+        a:hover{
+            color: #d4ff46;
+        }
+
+
+
+    </style>
+    <script>
+        /*  function  demo() {
+            var item =document.getElementById("title1").firstElementChild.firstElementChild;
+            item.addEventListener("mouseover",function () {
+                alert("mouseover")
+                item.style.display="inline-block";
+            });
+            item.addEventListener("mouseout",function () {
+                alert("mouseout")
+                item.style.display="none";
+            });
+
+
+        }
+        window.onload=demo;
+        */
+
+
+/*      function demo() {
+          var items=document.getElementById("title1").childElementCount;
+
+          for(var i=1 ;i<=items;i++){
+              var pa=document.getElementById(i+"");
+               var item=document.getElementById(i+"").firstElementChild;
+              pa.addEventListener("mouseover",function () {
+                  alert("1");
+                  item.style.display="inline-block"
+              });
+              pa.addEventListener("mouseout",function () {
+                  alert("2");
+                  item.style.display="none"
+              });
+
+
+          }
+      }
+        window.onload=demo;*/
+
+  /*      function  demo() {
+            var items=document.getElementById("title1").children; //div集合 id=1,2,3,4,5
+        }
+        window.onload=demo;*/
+
+        function divover(id) {
+            var item=document.getElementById(id+"").firstElementChild;
+            item.style.display="inline-block";
+        }
+        function divout(id) {
+            var item=document.getElementById(id+"").firstElementChild;
+            item.style.display="none";
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+<div class="content1" >
+    <div id="title1">
+        <div id="1"  onmouseover="divover(1)" onmouseout="divout(1)"  style="background: url(2.png)" >
+            <ul >
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+            </ul>
+        </div
+        ><div id="2"  onmouseover="divover(2)" onmouseout="divout(2)" >ssssss
+            <ul  >
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+            </ul>
+        </div
+        ><div id="3"  onmouseover="divover(3)" onmouseout="divout(3)" >sssssss
+            <ul   >
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+            </ul>
+        </div
+        ><div id="4"  onmouseover="divover(4)" onmouseout="divout(4)" >sss
+            <ul   >
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+
+            </ul>
+        </div
+        ><div id="5"  onmouseover="divover(5)" onmouseout="divout(5)">sss
+            <ul >
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+                <li><a href="#">1sssssss</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content1" ></div>
+
+
+</body>
+</html>
